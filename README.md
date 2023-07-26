@@ -1,4 +1,4 @@
-# LiteLog4s21
+# LogLite
 
 **Mini logger for big purposes**
 
@@ -22,7 +22,7 @@ overhead to a minimum.
 
 1. Clone the repository:
    ```shell
-   git clone https://github.com/LudwigAndreas/LiteLog4s21.git
+   git clone https://github.com/LudwigAndreas/LogLite.git
     ```
 2. Build the library using CMake:
    ```shell
@@ -33,11 +33,11 @@ overhead to a minimum.
     ```
 3. Include the necessary header files in your C++ project:
    ```c++
-    #include "<LiteLog4s21_path>/include/Logger.h"
+    #include "<LogLite_path>/include/Logger.h"
     ```
 4. Link your project with the generated library:
     ```shell
-    g++ example.cc -L/path/to/LiteLog4s21/lib/LiteLog4s21lib.a
+    g++ example.cc -L/path/to/LogLite/lib/LogLitelib.a
     ```
 
 ## Usage
