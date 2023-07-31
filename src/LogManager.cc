@@ -28,6 +28,11 @@ std::map<String, LoggerPtr> LogManager::GetLoggerRepo() {
 }
 
 LoggerPtr LogManager::getRootLogger() {
+  if (!root) {
+    auto logger = std::make_shared<Logger>("LogLite");
+    logger_repo_.insert({"LogLite", logger});
+    return logger;
+  }
   return root;
 }
 

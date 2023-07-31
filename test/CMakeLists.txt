@@ -76,7 +76,9 @@ ADD_EXECUTABLE(${test_BIN} ${project_SRCS}
     )
 
 TARGET_LINK_LIBRARIES(${test_BIN} ${test_LIBS})
-TARGET_INCLUDE_DIRECTORIES(${test_BIN} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+TARGET_INCLUDE_DIRECTORIES(${test_BIN} PRIVATE .)
 
 ADD_CUSTOM_TARGET(check ALL "${MAINFOLDER}/bin/${test_BIN}" DEPENDS ${test_BIN} COMMENT "Executing unit tests..." VERBATIM SOURCES ${test_SRCS} ${project_SRCS})
 ADD_CUSTOM_TARGET(test "${MAINFOLDER}/bin/${test_BIN}" DEPENDS ${test_BIN} COMMENT "Executing unit tests..." VERBATIM SOURCES ${test_SRCS} ${project_SRCS})
+
+INSTALL(TARGETS ${test_bin} DESTINATION bin)

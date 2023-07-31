@@ -21,7 +21,7 @@ TEST(LoggerTest, logger_init) {
   s21::diagnostic::LoggerConfigurator::configure(s21::diagnostic::PatternLayout("%d{%Y-%m-%d %X} %Y%5.5p%y \x1B[35m%-5P%y --- [%M] \x1B[36m%-25.40F%y : %m%n"));
   logger->SetPatternLayout(
       s21::diagnostic::PatternLayout(
-          "%d{%Y-%m-%d %X} %Y%5.5p%y m%-5P --- [%M] %-25.40F : %m%n"
+          "%d{%Y-%m-%d %X} %Y%5.5p%y %-5P --- [%M] %-25.40F : %m%n"
           ));
 
   logger->SetLevel(s21::diagnostic::LogLevel::Warn);
