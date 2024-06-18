@@ -1,44 +1,87 @@
 # LogLite
 
-**Mini logger for big purposes**
+Minimalistic C++ logger library inspired by log4cxx.
 
-## Description
+## Table of Contents
+
+- [About](#about)
+  - [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installing](#installing)
+- [Running the tests](#running-the-tests)
+- [Usage](#usage)
+- [Built Using](#built-using)
+- [Authors](#authors)
+- [Acknowledgments](#acknowledgments)
+- [License](#license)
+
+## About
 
 A lightweight logger library inspired by log4cxx but stripped down to include
 only the necessary classes for simplicity and efficiency. This logger is
 designed to facilitate easy logging in your C++ projects while keeping the
 overhead to a minimum.
 
-## Features
+### Features
 
 - Easy-to-use logging functionality.
 - Support for different log levels (TRACE, DEBUG, INFO, WARN, ERROR, FATAL).
 - Customizable log output format.
 - Ability to log to any output stream or files.
 - Lightweight and efficient.
-- Similar usage with Log4 family
+- Similar usage with Log4 family.
 
-## Installation
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+What things you need to install the software and how to install them.
+
+```text
+cmake >= 3.10
+gcc >= 7.5.0
+```
+
+```bash
+sudo apt-get install cmake
+sudo apt-get install gcc
+```
+
+### Installing
+
+A step by step series of examples that tell you how to get a development env running.
 
 1. Clone the repository:
-   ```shell
+
+   ```bash
    git clone https://github.com/LudwigAndreas/LogLite.git
     ```
+
 2. Build the library using CMake:
-   ```shell
+
+   ```bash
    mkdir build
    cd build
    cmake ..
    cake --build . 
     ```
+
 3. Include the necessary header files in your C++ project:
+
    ```c++
     #include "<LogLite_path>/include/Logger.h"
     ```
+
 4. Link your project with the generated library:
-    ```shell
+
+    ```bash
     g++ example.cc -L/path/to/LogLite/lib/LogLitelib.a
     ```
+
+## Running the tests
 
 ## Usage
 
@@ -72,7 +115,7 @@ int main() {
 }
 ```
 
-## Configuration
+### Configuration
 
 The logger output can be customized as you wish. Users can modify the log level,
 log format, and output destination (console or file) at any time using logger
@@ -113,7 +156,7 @@ int main() {
 }
 ```
 
-## Log Formatting
+### Log Formatting
 
 The logger supports the following placeholders in the log format:
 
@@ -144,24 +187,23 @@ The logger supports the following placeholders in the log format:
   logging event
 - `%%` : The sequence outputs a single percent sign
 
-## Contributing
+## Built Using
 
-We welcome contributions to improve and enhance this logger. If you'd like to
-contribute, please follow these steps:
+- [C++ 17](https://isocpp.org/) - Programming language
+- [CMake](https://cmake.org/) - Build system
+- [Google Test](https://google.github.io/googletest/) - Testing framework
 
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Make your changes and commit them with descriptive commit messages.
-4. Push your changes to your branch on your forked repository.
-5. Open a pull request to merge your changes into the main repository.
+## Authors
+
+| <img src="https://avatars.githubusercontent.com/u/88089961?v=4" alt="drawing" width="50"/> |[LudwigAndreas](https://github.com/LudwigAndreas)|
+| --- | --- |
+
+## Acknowledgments
+
+- [Log4cxx](https://logging.apache.org/log4cxx/latest_stable/) - The inspiration
+  for this project
 
 ## License
 
 This project is licensed under the MIT License - see
 the [LICENSE](https://chat.openai.com/LICENSE) file for details.
-
-## Contact
-
-If you have any questions, suggestions, or feedback, please feel free to contact
-us at [a.evstratov.work@gmail.com](mailto:a.evstratov.work@gmail.com) or open an issue
-on the GitHub repository.
