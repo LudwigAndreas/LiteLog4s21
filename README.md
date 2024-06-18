@@ -83,6 +83,12 @@ A step by step series of examples that tell you how to get a development env run
 
 ## Running the tests
 
+Explain how to run the automated tests for this system.
+
+```bash
+make test
+```
+
 ## Usage
 
 ```c++
